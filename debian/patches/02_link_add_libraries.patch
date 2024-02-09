@@ -1,0 +1,18 @@
+--- a/samples/echo/Makefile.am
++++ b/samples/echo/Makefile.am
+@@ -21,6 +21,7 @@
+ bonobo_echo_2_LDADD =				\
+ 	libEcho.a				\
+ 	$(top_builddir)/bonobo/libbonobo-2.la	\
++	$(top_builddir)/bonobo-activation/libbonobo-activation.la \
+ 	$(LIBBONOBO_LIBS)			\
+ 	$(INTLLIBS)
+ 
+@@ -28,6 +29,7 @@
+ echo_client_2_LDADD =				\
+ 	libEcho.a				\
+ 	$(top_builddir)/bonobo/libbonobo-2.la	\
++	$(top_builddir)/bonobo-activation/libbonobo-activation.la \
+ 	$(LIBBONOBO_LIBS)			\
+ 	$(INTLLIBS)
+ 

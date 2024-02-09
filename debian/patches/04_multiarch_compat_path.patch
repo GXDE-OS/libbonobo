@@ -1,0 +1,13 @@
+Index: libbonobo-2.32.1/bonobo-activation-config.xml
+===================================================================
+--- libbonobo-2.32.1.orig/bonobo-activation-config.xml	2009-04-20 15:16:57.000000000 +0200
++++ libbonobo-2.32.1/bonobo-activation-config.xml	2013-11-22 11:25:15.940770925 +0100
+@@ -8,6 +8,8 @@
+     <!-- <item>/usr/local/gnome2/lib/bonobo/servers</item> -->
+     <!-- <item>/usr/local/lib/bonobo/servers</item> -->
+     <!-- <item>/opt/gnome2/bonobo-activation/lib/bonobo/servers</item> -->
++    <!-- Compatibility with former path for multi-arch transition -->
++    <item>/usr/lib/bonobo/servers</item>
+ </searchpath>
+ 
+ </oafconfig>

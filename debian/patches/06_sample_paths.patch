@@ -1,0 +1,29 @@
+Index: libbonobo-2.32.1/samples/echo/Bonobo_Sample_Echo.server.in.in
+===================================================================
+--- libbonobo-2.32.1.orig/samples/echo/Bonobo_Sample_Echo.server.in.in	2009-04-20 15:16:57.000000000 +0200
++++ libbonobo-2.32.1/samples/echo/Bonobo_Sample_Echo.server.in.in	2013-11-23 21:07:30.981924419 +0100
+@@ -1,7 +1,7 @@
+ <oaf_info>
+ 
+ <oaf_server iid="OAFIID:Bonobo_Sample_Echo_Factory" type="exe" 
+-	location="@prefix@/lib/bonobo-2.0/samples/bonobo-echo-2">
++	location="@libdir@/bonobo/samples/bonobo-echo-2">
+ 	<oaf_attribute name="repo_ids" type="stringv">
+ 		<item value="IDL:GNOME/ObjectFactory:1.0"/>
+ 	</oaf_attribute>
+Index: libbonobo-2.32.1/samples/echo/Makefile.am
+===================================================================
+--- libbonobo-2.32.1.orig/samples/echo/Makefile.am	2013-11-23 21:05:36.382032651 +0100
++++ libbonobo-2.32.1/samples/echo/Makefile.am	2013-11-23 21:06:56.559158584 +0100
+@@ -5,9 +5,9 @@
+ server_dot_in=Bonobo_Sample_Echo.server.in
+ 
+ $(server_dot_in): $(server_dot_in).in
+-	$(AM_V_GEN) $(SED) -e "s|\@prefix\@|$(prefix)|" $< > $@
++	$(AM_V_GEN) $(SED) -e "s|\@libdir\@|$(libdir)|" $< > $@
+ 
+-samplesdir = $(libdir)/bonobo-2.0/samples
++samplesdir = $(libdir)/bonobo/samples
+ samples_PROGRAMS = bonobo-echo-2
+ 
+ bin_PROGRAMS     = echo-client-2

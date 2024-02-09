@@ -1,0 +1,22 @@
+Index: libbonobo-2.32.1/bonobo-activation/bonobo-activation-base-service.c
+===================================================================
+--- libbonobo-2.32.1.orig/bonobo-activation/bonobo-activation-base-service.c	2010-08-18 19:41:32.000000000 +0200
++++ libbonobo-2.32.1/bonobo-activation/bonobo-activation-base-service.c	2013-11-22 12:11:12.840539693 +0100
+@@ -537,7 +537,7 @@ _bonobo_activation_lock_fname_get (void)
+                                         "bonobo-activation-register.lock",
+                                         NULL);
+ 
+-       return g_strdup_printf ("%s" G_DIR_SEPARATOR_S "bonobo-activation-register-%s.lock",
++       return g_strdup_printf ("%s" G_DIR_SEPARATOR_S "bonobo-activation-register-" MULTIARCH_TRIPLET "-%s.lock",
+                                get_tmpdir (), session_guid);
+ }
+ 
+@@ -553,7 +553,7 @@ _bonobo_activation_ior_fname_get (void)
+                                         "bonobo-activation-server-ior",
+                                         NULL);
+ 
+-       return g_strdup_printf ("%s" G_DIR_SEPARATOR_S "bonobo-activation-server-%s-ior",
++       return g_strdup_printf ("%s" G_DIR_SEPARATOR_S "bonobo-activation-server-" MULTIARCH_TRIPLET "-%s-ior",
+                                get_tmpdir (), session_guid);
+ }
+ 

@@ -1,0 +1,4 @@
+debian/tmp/usr/bin
+debian/tmp/usr/sbin
+debian/tmp/usr/lib/*/bonobo/samples
+debian/tmp/usr/lib/*/bonobo/servers/Bonobo_Sample_Echo.server

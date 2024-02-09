@@ -1,0 +1,7 @@
+01_disable_deprecated.patch
+02_link_add_libraries.patch
+20_server-files-gettext.patch
+03_dont_use_srcdir_in_tests.patch
+04_multiarch_compat_path.patch
+05_multiarch_temp_path.patch
+06_sample_paths.patch
